@@ -13,14 +13,28 @@ export default function MainNav() {
         <Link href="/About">About</Link>
       </li>
       <li>
-        <Link href="/Shop-Juices">Shop Juices</Link>
+        <Link href="/Shop">Shop</Link>
       </li>
-      <li>
-        <Link href="/Shop Wines">Shop Wines</Link>
-      </li>
+
       <li>
         <Link href="/Events">Events</Link>
       </li>
+      <li>
+        <Link href="/Contact">Contact</Link>
+      </li>
+      <li>
+        <Link href="/Venue">Venue</Link>
+      </li>
+      <div className={styles.SignInAndCart}>
+        <li>
+          <button className={styles.loginButton}>Login</button>
+        </li>
+        <li>
+          <Link href="/cart" className={styles.cart}>
+            Cart
+          </Link>
+        </li>
+      </div>
     </nav>
   );
 }

@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
 import MainNav from "./mainNav";
-import stage from "public/images/stage-with-crowd.webp";
+import Banner from "@/components/home/Banner";
+import MarketAndMessage from "@/components/home/MarketAndMessage";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
         <style>
           @import
           url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Noto+Serif+JP:wght@200&display=swap');
+          @import
+          url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Noto+Serif+JP:wght@200&family=Playfair+Display&display=swap');
         </style>
       </Head>
 
@@ -22,12 +25,15 @@ export default function Home() {
         <h1 className={styles.mainTitle}>ElderBlossom View</h1>
         <div className={styles.mainImgWrapper}>
           <Image
-            src={stage}
+            src="/stage-with-crowd.webp"
             className={styles.mainImg}
             fill
+            priority
             alt="crowd enjoying band at winery"
           ></Image>
         </div>
+        <Banner />
+        <MarketAndMessage />
       </main>
     </>
   );
