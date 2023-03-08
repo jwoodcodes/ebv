@@ -11,7 +11,7 @@
   -webkit-text-fill-color: transparent;
   text-align: center;
   font-size: 4.3rem;
-  letter-spacing: 1rem;
+  letter-spacing: 1.5rem;
   z-index: 2;
 }
 
@@ -85,24 +85,93 @@
 }
 
 .banner {
-  height: 35vh;
+  height: 45vh;
   background-color: #212f45;
-
-  color: #fff;
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
-  letter-spacing: 0.1rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.bannerSpan {
-  padding-left: 25%;
+.bannerTextWrapper {
+  width: 45%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 2.25rem;
+  letter-spacing: 0.1rem;
+}
+
+.bannerShopLink {
+  text-decoration: none;
+  color: #2f9488;
+  letter-spacing: 0.1rem;
+  font-size: 2.75rem;
+}
+
+.bannerShopLink:hover {
+  transform: scale(1.25);
 }
 
 .marketandMessageWrapper {
-  height: 100vh;
-  background-color: #fff;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.marketMessage {
+  font-size: 3rem;
+  margin-top: 2rem;
+  font-family: "Playfair Display", serif;
+  color: #065a60;
+}
+
+.lowerBanner {
+  height: 50vh;
+  width: 100%;
+
+  background-color: #065a60;
+  color: #fff;
+  font-size: 1.8rem;
+
+  font-family: "Playfair Display", serif;
+
+  letter-spacing: 0.1rem;
+  line-height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lowerBannerText {
+  width: 60%;
+  letter-spacing: 0.1rem;
+  display: flex;
+  text-align: center;
+}
+
+.footer {
+  height: 15vh;
+  background-color: #212f45;
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footerLogo {
+  border-radius: 50%;
+}
+
+.socialWrapper {
+  display: flex;
+  align-items: center;
 }
