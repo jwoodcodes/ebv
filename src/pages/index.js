@@ -5,6 +5,8 @@ import styles from "@/styles/Home.module.css";
 import MainNav from "./mainNav";
 import Banner from "@/components/home/Banner";
 import MarketAndMessage from "@/components/home/MarketAndMessage";
+import LowerBanner from "@/components/home/lowerBanner";
+import Footer from "@/components/home/Footer";
 
 export default function Home() {
   return (
@@ -34,6 +36,8 @@ export default function Home() {
         </div>
         <Banner />
         <MarketAndMessage />
+        <LowerBanner />
+        <Footer />
       </main>
     </>
   );
