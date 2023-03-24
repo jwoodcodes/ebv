@@ -10,14 +10,25 @@ export default function Footer() {
         className={styles.footerLogo}
         width={100}
         height={100}
+        alt="ElderBlossom View Logo"
       ></Image>
       <div>&copy;2023</div>
       <div className={styles.socialWrapper}>
         <Link href="https://www.facebook.com/elderblossomview/">
-          <Image src="/facebook.png" width={50} height={50}></Image>
+          <Image
+            src="/facebook.png"
+            width={50}
+            height={50}
+            alt="facebook link"
+          ></Image>
         </Link>
         <Link href="https://www.instagram.com/elderblossomview/">
-          <Image src="/instagramLogo.png" width={60} height={60}></Image>
+          <Image
+            src="/instagramLogo.png"
+            width={60}
+            height={60}
+            alt="instagram link"
+          ></Image>
         </Link>
       </div>
     </div>
