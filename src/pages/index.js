@@ -31,7 +31,7 @@ export default function Home() {
             className={styles.mainImg}
             fill
             priority
-            alt="crowd enjoying band at winery"
+            alt="Crowd enjoying band at winery"
           ></Image>
         </div>
         <Banner />
