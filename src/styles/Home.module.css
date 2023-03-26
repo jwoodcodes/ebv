@@ -17,8 +17,8 @@
 
 .mainImgWrapper {
   position: relative;
-  height: 93vh;
-  max-height: 93vh;
+  height: 80vh;
+  max-height: 80vh;
 }
 
 .mainNav {
@@ -85,7 +85,7 @@
 }
 
 .banner {
-  height: 45vh;
+  height: 50vh;
   background-color: #212f45;
 
   display: flex;
@@ -111,11 +111,17 @@
   text-decoration: none;
   color: #2f9488;
   letter-spacing: 0.1rem;
-  font-size: 2.75rem;
+  font-size: 3rem;
 }
 
 .bannerShopLink:hover {
   transform: scale(1.25);
+}
+
+.bannerHere {
+  font-size: 3.25rem;
+  color: #2f9488;
+  text-decoration: underline;
 }
 
 .marketandMessageWrapper {
@@ -134,7 +140,7 @@
 }
 
 .lowerBanner {
-  height: 50vh;
+  height: 60vh;
   width: 100%;
 
   background-color: #065a60;
