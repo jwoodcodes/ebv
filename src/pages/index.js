@@ -24,13 +24,15 @@ export default function Home() {
 
       <main>
         <MainNav />
-        <h1 className={styles.mainTitle}>ElderBlossom View</h1>
+        <div className={styles.aboveMainImage}>
+          <h1 className={styles.mainTitle}>ElderBlossom View</h1>
+        </div>
         <div className={styles.mainImgWrapper}>
           <Image
             src="/stage-with-crowd.webp"
             className={styles.mainImg}
             fill
-            priority
+            lazy
             alt="Crowd enjoying band at winery"
           ></Image>
         </div>
