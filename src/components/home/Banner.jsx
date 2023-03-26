@@ -11,7 +11,8 @@ export default function Banner() {
         </div>
         <div>
           <Link href="/Shop" className={styles.bannerShopLink}>
-            Shop our full line of products HERE{" "}
+            Shop our full line of products{" "}
+            <span className={styles.bannerHere}>HERE</span>
           </Link>
         </div>
       </div>
