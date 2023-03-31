@@ -17,7 +17,8 @@
 
 .aboveMainImage {
   height: 35vh;
-  background-color: #f3fafc;
+  /* background-color: #f3fafc; */
+  background: linear-gradient(to right, #e6f0f6, #f8fdfe, #ffffff);
 }
 
 .mainImgWrapper {
