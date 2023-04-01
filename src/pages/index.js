@@ -7,6 +7,12 @@ import Banner from "@/components/home/Banner";
 import MarketAndMessage from "@/components/home/MarketAndMessage";
 import LowerBanner from "@/components/home/LowerBanner";
 import Footer from "@/components/home/Footer";
+import { Great_Vibes } from "@next/font/google";
+
+const great_vibes = Great_Vibes({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export default function Home() {
   return (
@@ -14,25 +20,21 @@ export default function Home() {
       <Head>
         <title>ElderBlossom View</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <style>
-          @import
-          url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Noto+Serif+JP:wght@200&display=swap');
-          @import
-          url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Noto+Serif+JP:wght@200&family=Playfair+Display&display=swap');
-        </style>
       </Head>
 
       <main>
         <MainNav />
         <div className={styles.aboveMainImage}>
-          <h1 className={styles.mainTitle}>ElderBlossom View</h1>
+          <div className={great_vibes.className}>
+            <h1 className={styles.mainTitle}>ElderBlossom View</h1>
+          </div>
         </div>
         <div className={styles.mainImgWrapper}>
           <Image
             src="/stage-with-crowd.webp"
             className={styles.mainImg}
             fill
-            lazy
+            lazy="true"
             alt="Crowd enjoying band at winery"
           ></Image>
         </div>
