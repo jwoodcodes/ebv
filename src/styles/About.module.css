@@ -26,6 +26,7 @@
 .paragraphWrapper {
   width: 50%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 5rem;
@@ -37,10 +38,12 @@
 }
 
 .aboutVideo {
-  color: #200e36;
+  /* color: #200e36; */
+  color: hsl(269, 92%, 5%);
   font-size: 2.35rem;
   text-decoration: underline;
   letter-spacing: 0.35rem;
+  padding-left: 9rem;
 }
 
 .aboutLinksWrapper {
