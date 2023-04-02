@@ -12,7 +12,10 @@ export default function Footer() {
         height={100}
         alt="ElderBlossom View Logo"
       ></Image>
-      <div>&copy;2023</div>
+      <div className={styles.copyWrapper}>
+        <span className={styles.footerCopy}>&copy;</span>
+        <span>2023</span>
+      </div>
       <div className={styles.socialWrapper}>
         <Link href="https://www.facebook.com/elderblossomview/">
           <Image
