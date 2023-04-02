@@ -44,16 +44,15 @@
   align-items: center;
 }
 
-.navlogoWrapper {
-  width: 4rem;
-  margin-left: -10rem;
-  margin-right: -4rem;
-  display: flex;
-  justify-content: flex-start;
-}
-
 .headerLogo {
   border-radius: 50%;
+}
+
+.navItemsWrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 0.9;
+  padding-right: 6rem;
 }
 
 .mainNav li {

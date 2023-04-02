@@ -6,43 +6,44 @@ import Link from "next/link";
 export default function MainNav() {
   return (
     <nav className={styles.mainNav}>
-      <li className={styles.navlogoWrapper}>
-        <Image
-          src="/ebvLogo.jfif"
-          className={styles.headerLogo}
-          width={50}
-          height={50}
-          alt="ElderBlossom View Logo"
-        ></Image>
-      </li>
-      <li>
-        <Link href="/">Home</Link>
-      </li>
-      <li>
-        <Link href="/About">About</Link>
-      </li>
-      <li>
-        <Link href="/Shop">Shop</Link>
-      </li>
+      <Image
+        src="/ebvLogo.jfif"
+        className={styles.headerLogo}
+        width={50}
+        height={50}
+        alt="ElderBlossom View Logo"
+      ></Image>
+      <div className={styles.navItemsWrapper}>
+        <li>
+          <Link href="/">Home</Link>
+        </li>
+        <li>
+          <Link href="/About">About</Link>
+        </li>
+        <li>
+          <Link href="/Shop">Shop</Link>
+        </li>
 
-      <li>
-        <Link href="/Events">Events</Link>
-      </li>
-      <li>
-        <Link href="/Contact">Contact</Link>
-      </li>
-      <li>
-        <Link href="/Venue">Venue</Link>
-      </li>
-      <div className={styles.SignInAndCart}>
         <li>
-          <button className={styles.loginButton}>Login</button>
+          <Link href="/Events">Events</Link>
         </li>
         <li>
-          <Link href="/cart" className={styles.cart}>
-            Cart
-          </Link>
+          <Link href="/Contact">Contact</Link>
         </li>
+        <li>
+          <Link href="/Venue">Venue</Link>
+        </li>
+        <div className={styles.SignInAndCart}>
+          <li>
+            <button className={styles.loginButton}>Login</button>
+          </li>
+
+          <li>
+            <Link href="/cart" className={styles.cart}>
+              Cart
+            </Link>
+          </li>
+        </div>
       </div>
     </nav>
   );
