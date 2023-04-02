@@ -6,13 +6,15 @@ import Link from "next/link";
 export default function MainNav() {
   return (
     <nav className={styles.mainNav}>
-      <Image
-        src="/ebvLogo.jfif"
-        className={styles.headerLogo}
-        width={50}
-        height={50}
-        alt="ElderBlossom View Logo"
-      ></Image>
+      <div className={styles.navLogoWrapper}>
+        <Image
+          src="/ebvLogo.jfif"
+          className={styles.headerLogo}
+          width={50}
+          height={50}
+          alt="ElderBlossom View Logo"
+        ></Image>
+      </div>
       <div className={styles.navItemsWrapper}>
         <li>
           <Link href="/">Home</Link>
