@@ -7,7 +7,7 @@ export default function Footer() {
     <div className={styles.footer}>
       <Image
         src="/ebvLogo.jfif"
-        className={styles.footerLogo}
+        className={styles.headerLogo}
         width={100}
         height={100}
         alt="ElderBlossom View Logo"

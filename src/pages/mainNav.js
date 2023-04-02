@@ -6,6 +6,13 @@ import Link from "next/link";
 export default function MainNav() {
   return (
     <nav className={styles.mainNav}>
+      <Image
+        src="/ebvLogo.jfif"
+        className={styles.headerLogo}
+        width={50}
+        height={50}
+        alt="ElderBlossom View Logo"
+      ></Image>
       <li>
         <Link href="/">Home</Link>
       </li>

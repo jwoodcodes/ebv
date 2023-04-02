@@ -44,6 +44,11 @@
   align-items: center;
 }
 
+.headerLogo {
+  margin-left: -10rem;
+  border-radius: 50%;
+}
+
 .mainNav li {
   list-style-type: none;
 }
