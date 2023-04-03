@@ -35,17 +35,17 @@ export default function MainNav() {
         <li>
           <Link href="/Venue">Venue</Link>
         </li>
-        <div className={styles.SignInAndCart}>
-          <li>
-            <button className={styles.loginButton}>Login</button>
-          </li>
+      </div>
+      <div className={styles.SignInAndCart}>
+        <li>
+          <button className={styles.loginButton}>Login</button>
+        </li>
 
-          <li>
-            <Link href="/cart" className={styles.cart}>
-              Cart
-            </Link>
-          </li>
-        </div>
+        <li>
+          <Link href="/cart" className={styles.cart}>
+            Cart
+          </Link>
+        </li>
       </div>
     </nav>
   );
