@@ -8,7 +8,7 @@ export default function About() {
   return (
     <>
       <MainNav />
-      <h1 className={styles.title}>About ElderBlossom View</h1>
+      <div className={styles.title}>About ElderBlossom View</div>
       <div className={styles.mainWrapper}>
         <div className={styles.imageWrapper}>
           <Image

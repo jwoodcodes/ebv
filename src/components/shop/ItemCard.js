@@ -9,18 +9,19 @@ export default function ItemCard({
   altText,
   width,
   height,
-  gridIndex,
 }) {
   return (
     <div className={styles.cardWrapper}>
       <Image
         src={imageURL}
         className={styles.cardImage}
+        lazy="true"
         width={width}
         height={height}
+        altText={altText}
       ></Image>
-      <div>{title}</div>
-      <div>{price}</div>
+      <div className={styles.cardItemTitle}>{title}</div>
+      <div className={styles.cardItemPrice}>{price}</div>
     </div>
   );
 }

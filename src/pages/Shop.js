@@ -1,27 +1,45 @@
+import React from "react";
 import Link from "next/link";
 import styles from "@/styles/Shop.module.css";
 import MainNav from "./mainNav";
 import Footer from "@/components/home/Footer";
-import Image from "next/image";
-import ItemCard from "@/components/shop/ItemCard";
+import ProductsPage from "@/components/shop/ProductsPage";
+import EventsPage from "@/components/shop/EventsPage";
 
 export default function Shop() {
+  const [productDisplay, setProductDisplay] = React.useState("true");
+
+  function TogglePageToProducts() {
+    if (productDisplay === "false") {
+      setProductDisplay("true");
+    }
+  }
+
+  function TogglePageToEvents() {
+    if (productDisplay === "true") {
+      setProductDisplay("false");
+    }
+  }
+
   return (
     <>
       <MainNav />
-
-      <div className={styles.mainWrapper}>
-        <ItemCard
-          imageURL="/juice.webp"
-          title="Elderberry Juice"
-          price="$20.00"
-          altText="Bottle of elderberry juice"
-          width="175"
-          height="250"
-          gridIndex="1"
-        />
+      <div className={styles.shopTitle}>ElderBlossom View Shop</div>
+      <div className={styles.buttonWrapper}>
+        <button
+          className={styles.productsButton}
+          onClick={TogglePageToProducts}
+        >
+          Shop Products
+        </button>
+        <button className={styles.eventsButton} onClick={TogglePageToEvents}>
+          Shop Event Tickets
+        </button>
       </div>
-
+      <div className={styles.gridWrapper}>
+        {productDisplay === "true" && <ProductsPage />}
+        {productDisplay === "false" && <EventsPage />}
+      </div>
       <Footer />
     </>
   );
