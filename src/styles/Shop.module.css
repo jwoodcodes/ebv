@@ -45,13 +45,13 @@
   box-shadow: 0 1.1rem 3.1rem rgba(0, 0, 0, 0.4);
   background-color: #08565c;
   transform: translateY(-0.5rem);
-  transition: all 0.4s;
+  transition: all 0.2s;
 }
 
 .productsButton:active,
 .eventsButton:active {
   transform: translateY(0);
-  transition: all 0.4s;
+  transition: all 0.2s;
 }
 
 .cardWrapper {
