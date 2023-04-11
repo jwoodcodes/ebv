@@ -5,6 +5,7 @@ import MainNav from "./mainNav";
 import Footer from "@/components/home/Footer";
 import ProductsPage from "@/components/shop/ProductsPage";
 import EventsPage from "@/components/shop/EventsPage";
+import ShopDataFromDb from "@/components/shop/fetchData";
 
 export default function Shop() {
   const [productDisplay, setProductDisplay] = React.useState("true");
@@ -40,6 +41,7 @@ export default function Shop() {
         {productDisplay === "true" && <ProductsPage />}
         {productDisplay === "false" && <EventsPage />}
       </div>
+
       <Footer />
     </>
   );
