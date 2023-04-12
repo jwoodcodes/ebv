@@ -6,7 +6,7 @@ export default function ItemCard({
   imageURL,
   title,
   price,
-  altText,
+  alttext,
   width,
   height,
 }) {
@@ -15,10 +15,10 @@ export default function ItemCard({
       <Image
         src={imageURL}
         className={styles.cardImage}
-        lazy="true"
+        priority
         width={width}
         height={height}
-        altText={altText}
+        altText={alttext}
       ></Image>
       <div className={styles.cardItemTitle}>{title}</div>
       <div className={styles.cardItemPrice}>{price}</div>
