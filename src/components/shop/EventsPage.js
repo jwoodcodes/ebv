@@ -9,7 +9,7 @@ export default function EventsPage() {
         imageURL="/bel-airs.jpg"
         title="The Bel Airs"
         price="$5.00"
-        altText="the band the Bel Airs"
+        alttext="the band the Bel Airs"
         width="360"
         height="360"
       />
@@ -17,7 +17,7 @@ export default function EventsPage() {
         imageURL="/mick-byrd.jpg"
         title="Mick Byrd and the Backroad Band"
         price="$5.00"
-        altText="Mick Beard"
+        alttext="Mick Beard"
         width="360"
         height="360"
       />
@@ -25,7 +25,7 @@ export default function EventsPage() {
         imageURL="/hart-creek-ramblers.jpg"
         title="Hart Creek Ramblers"
         price="$5.00"
-        altText="Hart Creek Ramblers Band"
+        alttext="Hart Creek Ramblers Band"
         width="360"
         height="360"
       />
@@ -33,7 +33,7 @@ export default function EventsPage() {
         imageURL="/apostles-creek.jpg"
         title="Apostle's Creek"
         price="$5.00"
-        altText="Apostle's Creek Band"
+        alttext="Apostle's Creek Band"
         width="360"
         height="360"
       />
