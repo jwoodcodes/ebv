@@ -1,16 +1,30 @@
 import styles from "@/styles/Shop.module.css";
 import Image from "next/image";
 import ItemCard from "@/components/shop/ItemCard";
+import Shop from "@/pages/Shop";
 
-// import dbHandler from "@/pages/api/dbHandler";
-
-export default function ProductsPage() {
-  // console.log(dbHandler);
-  // console.log(data);
+export default function ProductsPage({ itemsObject }) {
+  // console.log(itemsObject);
 
   return (
     <>
-      <ItemCard
+      {itemsObject.map((item) => {
+        // console.log(item.title);
+        <ItemCard
+          imageURL={item.imgsrc}
+          title={item.title}
+          price={item.price}
+          alttext={item.alttext}
+          width={item.imgWidth}
+          height={item.imgHeight}
+        />;
+      })}
+    </>
+  );
+}
+
+{
+  /* <ItemCard
         imageURL="/juice.webp"
         title="Elderberry Juice"
         price="$20.00"
@@ -18,7 +32,6 @@ export default function ProductsPage() {
         width="360"
         height="440"
       />
-
       <ItemCard
         imageURL="/elderflower-necter.webp"
         title="Elderflower Necter"
@@ -27,7 +40,6 @@ export default function ProductsPage() {
         width="360"
         height="440"
       />
-
       <ItemCard
         imageURL="/relief.webp"
         title="Elderberry relief"
@@ -36,7 +48,6 @@ export default function ProductsPage() {
         width="360"
         height="440"
       />
-
       <ItemCard
         imageURL="/elderberry-wine-vinegar.webp"
         title="Elderberry Wine Vinegar"
@@ -44,7 +55,6 @@ export default function ProductsPage() {
         alttext="Bottle of elderberry Wine Vinegar"
         width="360"
         height="440"
-      />
-    </>
-  );
+      />{" "}
+      */
 }

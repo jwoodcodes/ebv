@@ -9,6 +9,7 @@ export default async (req, res) => {
 
     const data = await db.collection("shopData").find({}).toArray();
     res.json(data);
+    console.log(data);
   } catch (e) {
     console.error(e);
   }
