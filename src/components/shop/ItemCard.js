@@ -18,7 +18,7 @@ export default function ItemCard({
         priority
         width={width}
         height={height}
-        altText={alttext}
+        alt={alttext}
       ></Image>
       <div className={styles.cardItemTitle}>{title}</div>
       <div className={styles.cardItemPrice}>{price}</div>
