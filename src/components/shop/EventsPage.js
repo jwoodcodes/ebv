@@ -4,7 +4,7 @@ import ItemCard from "@/components/shop/ItemCard";
 
 export default function EventsPage() {
   return (
-    <>
+    <div className={styles.gridWrapper}>
       <ItemCard
         imageURL="/bel-airs.jpg"
         title="The Bel Airs"
@@ -37,6 +37,6 @@ export default function EventsPage() {
         width="360"
         height="360"
       />
-    </>
+    </div>
   );
 }

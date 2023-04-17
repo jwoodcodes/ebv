@@ -3,25 +3,29 @@ import Image from "next/image";
 import ItemCard from "@/components/shop/ItemCard";
 import Shop from "@/pages/Shop";
 
-export default function ProductsPage({ itemsObject }) {
+function ProductsPage({ itemsObject }) {
   // console.log(itemsObject);
 
   return (
-    <>
+    <ul className={styles.gridWrapper}>
       {itemsObject.map((item) => {
         // console.log(item.title);
-        <ItemCard
-          imageURL={item.imgsrc}
-          title={item.title}
-          price={item.price}
-          alttext={item.alttext}
-          width={item.imgWidth}
-          height={item.imgHeight}
-        />;
+        return (
+          <ItemCard
+            imageURL={item.imgsrc}
+            title={item.title}
+            price={item.price}
+            alttext={item.alttext}
+            width={item.imgWidth}
+            height={item.imgHeight}
+          />
+        );
       })}
-    </>
+    </ul>
   );
 }
+
+export default ProductsPage;
 
 {
   /* <ItemCard

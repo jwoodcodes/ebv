@@ -24,8 +24,12 @@ export default function Shop({ products }) {
       setProductDisplay("false");
     }
   }
+
   return (
     <>
+      {products.map((tempItem) => {
+        itemsObject = tempItem.allShopData;
+      })}
       <MainNav />
       <div className={styles.shopTitle}>ElderBlossom View Shop</div>
       <div className={styles.buttonWrapper}>
@@ -39,10 +43,7 @@ export default function Shop({ products }) {
           Shop Event Tickets
         </button>
       </div>
-      <div className={styles.gridWrapper}>
-        {products.map((tempItem) => {
-          itemsObject = tempItem.allShopData;
-        })}
+      <div>
         {productDisplay === "true" && (
           <ProductsPage itemsObject={itemsObject} />
         )}
@@ -51,21 +52,10 @@ export default function Shop({ products }) {
 
       <Footer />
     </>
-
-    // <div>
-    //   <h1>products</h1>
-    //   <ul>
-    //     {products.map((item) => (
-    //       <li>
-    //         <h2>{item.title}</h2>
-    //       </li>
-    //     ))}
-    //   </ul>
-    // </div>
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   try {
     const client = await clientPromise;
     const db = client.db("shopData");
