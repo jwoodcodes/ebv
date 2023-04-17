@@ -8,10 +8,11 @@ function ProductsPage({ itemsObject }) {
 
   return (
     <ul className={styles.gridWrapper}>
-      {itemsObject.map((item) => {
-        // console.log(item.title);
+      {itemsObject.map((item, index) => {
+        console.log(item.alttext);
         return (
           <ItemCard
+            key={index}
             imageURL={item.imgsrc}
             title={item.title}
             price={item.price}
