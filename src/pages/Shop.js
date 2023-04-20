@@ -47,7 +47,7 @@ export default function Shop({ products }) {
         {productDisplay === "true" && (
           <ProductsPage itemsObject={itemsObject} />
         )}
-        {productDisplay === "false" && <EventsPage />}
+        {productDisplay === "false" && <EventsPage itemsObject={itemsObject} />}
       </div>
 
       <Footer />
