@@ -22,6 +22,9 @@ export default function ItemCard({
       ></Image>
       <div className={styles.cardItemTitle}>{title}</div>
       <div className={styles.cardItemPrice}>{price}</div>
+      <Link href="/Shop/[title]" className={styles.cardMoreDetails}>
+        Full Description & To Order &rarr;
+      </Link>
     </div>
   );
 }

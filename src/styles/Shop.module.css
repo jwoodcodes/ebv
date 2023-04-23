@@ -45,18 +45,19 @@
   box-shadow: 0 1.1rem 3.1rem rgba(0, 0, 0, 0.4);
   background-color: #08565c;
   transform: translateY(-0.5rem);
-  transition: all 0.2s;
+  transition: all 0.1s;
 }
 
 .productsButton:active,
 .eventsButton:active {
   transform: translateY(0);
-  transition: all 0.2s;
+  transition: all 0.1s;
 }
 
 .cardWrapper {
   max-width: 28rem;
   min-width: 25rem;
+  max-height: 35rem;
   background: linear-gradient(to right bottom, #065a60, #420c47);
   font-family: "Playfair Display", serif;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
@@ -69,8 +70,21 @@
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  transition: all 0.3s;
 
   /* grid-column: 2 / 4; */
+}
+
+.cardWrapper:hover .cardImage {
+  transform: scale(0.9) translateY(-0.1rem);
+}
+
+.cardWrapper:hover .cardItemTitle {
+  transform: translateY(-0.75rem) scale(1);
+}
+
+.cardWrapper:hover .cardItemPrice {
+  transform: translateY(-0.75rem) scale(0.9);
 }
 
 .cardImage {
@@ -80,6 +94,7 @@
 
 .cardItemTitle {
   padding-top: 0.75rem;
+  font-size: 1.25rem;
   letter-spacing: 0.1rem;
   width: 75%;
   margin-left: auto;
@@ -88,4 +103,19 @@
 }
 .cardItemPrice {
   padding-bottom: 0.75rem;
+}
+
+.cardMoreDetails {
+  color: white;
+
+  width: 0;
+  display: none;
+}
+
+.cardWrapper:hover .cardMoreDetails {
+  display: inline;
+
+  width: fit-content;
+  transform: translateY(-1rem);
+  padding-bottom: 1.25rem;
 }
