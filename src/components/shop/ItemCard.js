@@ -22,7 +22,15 @@ export default function ItemCard({
       ></Image>
       <div className={styles.cardItemTitle}>{title}</div>
       <div className={styles.cardItemPrice}>{price}</div>
-      <Link href="/Shop/[title]" className={styles.cardMoreDetails}>
+
+      <Link
+        href={{
+          pathname: "/ShopItemDetails/[title]",
+          query: { title: `${title}` },
+        }}
+        className={styles.cardMoreDetails}
+        title={`${title}`}
+      >
         Full Description & To Order &rarr;
       </Link>
     </div>
