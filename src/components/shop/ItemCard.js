@@ -22,8 +22,7 @@ export default function ItemCard({
       ></Image>
       <div className={styles.cardItemTitle}>{title}</div>
       <div className={styles.cardItemPrice}>{price}</div>
-      // next thing to try is to put the Link below into a component and render
-      that component below and // pass ${title} as a prop to that component. IDK
+
       <Link
         href={{
           pathname: "/ShopItemDetails/[title]",
