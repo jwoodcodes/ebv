@@ -12,7 +12,7 @@ export default function ItemDetailsPage({ item, data }) {
   return (
     <div>
       <div>{item}</div>
-      {itemsArray.map((product) => {
+      {itemsArray.map((product, index) => {
         // console.log(product);
         if (item === product.title) {
           return (
@@ -22,6 +22,7 @@ export default function ItemDetailsPage({ item, data }) {
               height="500"
               priority
               alt={product.alttext}
+              key={index}
             />
           );
         }
