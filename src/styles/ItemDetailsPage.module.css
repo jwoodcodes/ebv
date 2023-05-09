@@ -1,0 +1,97 @@
+.itemTitle {
+  text-align: center;
+  margin-top: 5rem;
+
+  font-size: 4.5rem;
+  letter-spacing: 0.25rem;
+  background: linear-gradient(to right bottom, #420c47, #065a60);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mainWrapper {
+  display: flex;
+  height: 80vh;
+  /* justify-content: space-around; */
+}
+
+.imgWrapper {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemImg {
+  border-radius: 5%;
+}
+
+.orderAndDescWrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerorderAndDescWrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addToCartButton {
+  background-color: #065a60;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  font-size: 1.25rem;
+  height: 4rem;
+  width: 20rem;
+  max-width: 22rem;
+  border-radius: 3%;
+  border: white;
+  margin-bottom: 2rem;
+}
+
+.addToCartButton:hover {
+  ransform: scale(1.05);
+  box-shadow: 0 1.1rem 3.1rem rgba(0, 0, 0, 0.4);
+  background-color: #08565c;
+  transform: translateY(-0.5rem);
+  transition: all 0.15s;
+}
+
+.addToCartButton:active {
+  transform: translateY(0);
+  transition: all 0.15s;
+}
+
+.hotToGetIt {
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
+.radioButtonsWrapper {
+  /* display: flex; */
+}
+
+.shippingRadio {
+  margin: 1rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.2rem;
+}
+
+.pickupRadio {
+  margin: 1rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.2rem;
+}
+
+.itemDescription {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  margin-top: 1rem;
+}
