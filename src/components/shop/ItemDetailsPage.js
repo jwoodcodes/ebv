@@ -24,7 +24,7 @@ export default function ItemDetailsPage({ item, data }) {
         // console.log(product);
         if (item === product.title) {
           return (
-            <div className={styles.mainWrapper}>
+            <div className={styles.mainWrapper} key={index}>
               <div className={styles.imgWrapper}>
                 <Image
                   src={product.imgsrc}
