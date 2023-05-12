@@ -4,7 +4,11 @@
 
   font-size: 4.5rem;
   letter-spacing: 0.25rem;
-  background: linear-gradient(to right bottom, #420c47, #065a60);
+  background: linear-gradient(
+    to right bottom,
+    oklch(28.05% 0.112 324.24),
+    oklch(44.67% 0.071 203.29)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -47,16 +51,16 @@
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
   color: #ffffff;
   font-size: 1.25rem;
-  height: 4rem;
-  width: 20rem;
-  max-width: 22rem;
+  height: 4.5rem;
+  width: 15rem;
+  max-width: 17rem;
   border-radius: 3%;
   border: white;
   margin-bottom: 2rem;
 }
 
 .addToCartButton:hover {
-  ransform: scale(1.05);
+  transform: scale(1.05);
   box-shadow: 0 1.1rem 3.1rem rgba(0, 0, 0, 0.4);
   background-color: #08565c;
   transform: translateY(-0.5rem);
@@ -68,9 +72,27 @@
   transition: all 0.15s;
 }
 
+.removeOneFromCartBtn,
+.addOneToCartBtn {
+  background-color: #065a60;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  font-size: 1.25rem;
+  height: 4.5rem;
+  width: 8rem;
+  max-width: 10rem;
+  border-radius: 3%;
+  border: white;
+  margin-bottom: 2rem;
+}
+
+.addOneToCartBtn {
+}
+
 .hotToGetIt {
   text-align: center;
   letter-spacing: 0.2rem;
+  font-size: 1.5rem;
 }
 
 .radioButtonsWrapper {

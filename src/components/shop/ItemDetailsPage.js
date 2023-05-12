@@ -38,9 +38,13 @@ export default function ItemDetailsPage({ item, data }) {
               </div>
               <div className={styles.orderAndDescWrapper}>
                 <div className={styles.innerorderAndDescWrapper}>
-                  <button className={styles.addToCartButton}>
-                    Add To Cart
-                  </button>
+                  <div className={styles.addToCartWrapper}>
+                    <button className={styles.removeOneFromCartBtn}>-1</button>
+                    <button className={styles.addToCartButton}>
+                      Add To Cart
+                    </button>
+                    <button className={styles.addOneToCartBtn}>+1</button>
+                  </div>
                   <form>
                     <div className={styles.radioButtonsWrapper}>
                       <h3 className={styles.hotToGetIt}>How to get it</h3>
