@@ -13,7 +13,7 @@ export default function EventsPage({ itemsObject }) {
               key={index}
               imageURL={item.imgsrc}
               title={item.title}
-              price={item.price}
+              price={item.actualPrice}
               alttext={item.alttext}
               width={item.imgWidth}
               height={item.imgHeight}

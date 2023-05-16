@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function ItemCard({
   imageURL,
   title,
-  price,
+  actualPrice,
   alttext,
   width,
   height,
@@ -21,7 +21,7 @@ export default function ItemCard({
         alt={alttext}
       ></Image>
       <div className={styles.cardItemTitle}>{title}</div>
-      <div className={styles.cardItemPrice}>{price}</div>
+      <div className={styles.cardItemPrice}>{actualPrice}</div>
 
       <Link
         href={{

@@ -6,6 +6,7 @@ import React from "react";
 
 export default function ItemDetailsPage({ item, data }) {
   const [deliveryMethod, setDeliveryMthod] = React.useState("shipping");
+  const [currentCartNumber, setCurrentCartNumber] = React.useState(0);
 
   //   console.log({ data });
   let itemsArray;
@@ -43,7 +44,14 @@ export default function ItemDetailsPage({ item, data }) {
                     <button className={styles.addToCartButton}>
                       Add To Cart
                     </button>
-                    <button className={styles.addOneToCartBtn}>+1</button>
+                    <button
+                      className={styles.addOneToCartBtn}
+                      onClick={() => {
+                        setCurrentCartNumber(currentCartNumber + 1);
+                      }}
+                    >
+                      +1 ({currentCartNumber})
+                    </button>
                   </div>
                   <form>
                     <div className={styles.radioButtonsWrapper}>
