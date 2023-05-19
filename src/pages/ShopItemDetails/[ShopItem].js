@@ -13,7 +13,7 @@ const ShopItem = ({ products }) => {
 
   React.useEffect(() => {
     setState(router.isReady);
-    // console.log(router.query.ShopItem);
+    // console.log(router.query.ShopItem);]
   }, [router.isReady]);
 
   if (state === true) {
