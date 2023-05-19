@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "@/styles/About.module.css";
-import MainNav from "./mainNav";
+import MainNav from "@/components/MainNav";
 import Footer from "@/components/home/Footer";
 import Image from "next/image";
 

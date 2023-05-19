@@ -1,4 +1,4 @@
-import MainNav from "@/pages/mainNav";
+import MainNav from "../MainNav";
 import Image from "next/image";
 import styles from "@/styles/ItemDetailsPage.module.css";
 import Footer from "../home/Footer";
@@ -19,7 +19,6 @@ export default function ItemDetailsPage({ item, data }) {
   return (
     <div>
       <MainNav />
-
       <div className={styles.itemTitle}>{item}</div>
       {itemsArray.map((product, index) => {
         // console.log(product);
@@ -29,8 +28,8 @@ export default function ItemDetailsPage({ item, data }) {
               <div className={styles.imgWrapper}>
                 <Image
                   src={product.imgsrc}
-                  width="500"
-                  height="500"
+                  width="550"
+                  height="550"
                   priority
                   alt={product.alttext}
                   key={index}

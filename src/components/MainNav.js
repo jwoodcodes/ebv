@@ -42,7 +42,7 @@ export default function MainNav() {
         </li>
 
         <li>
-          <Link href="/cart" className={styles.cart}>
+          <Link href="/Cart" className={styles.cart}>
             Cart
           </Link>
         </li>
