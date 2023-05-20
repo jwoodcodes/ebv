@@ -6,10 +6,11 @@ import React from "react";
 
 export default function ItemDetailsPage({ item, data }) {
   const [deliveryMethod, setDeliveryMthod] = React.useState("shipping");
-  const [currentCartNumber, setCurrentCartNumber] = React.useState(0);
 
   //   console.log({ data });
   let itemsArray;
+  const quantity = 1;
+
   {
     data.map((items) => {
       //   console.log(items.allShopData);
@@ -39,18 +40,39 @@ export default function ItemDetailsPage({ item, data }) {
               <div className={styles.orderAndDescWrapper}>
                 <div className={styles.innerorderAndDescWrapper}>
                   <div className={styles.addToCartWrapper}>
-                    <button className={styles.removeOneFromCartBtn}>-1</button>
-                    <button className={styles.addToCartButton}>
-                      Add To Cart
-                    </button>
-                    <button
-                      className={styles.addOneToCartBtn}
-                      onClick={() => {
-                        setCurrentCartNumber(currentCartNumber + 1);
-                      }}
-                    >
-                      +1 ({currentCartNumber})
-                    </button>
+                    {/* <button className={styles.removeOneFromCartBtn}>-1</button> */}
+                    {quantity === 0 ? (
+                      <button className={styles.addToCartButton}>
+                        + Add To Cart
+                      </button>
+                    ) : (
+                      <div
+                        className={
+                          styles.cartAddOrRemoveIfItemIsInCartAlreadyContainer
+                        }
+                      >
+                        <div
+                          className={
+                            styles.cartAddOrRemoveIfItemIsInCartAlready
+                          }
+                        >
+                          <button className={styles.minusFromCartBtn}>-</button>
+                          <div
+                            className={styles.howManyInCartTextWhenItemIsInCart}
+                          >
+                            <span className={styles.addToCartSpan}>
+                              {quantity}
+                            </span>
+                            {""}
+                            in cart
+                          </div>
+                          <button className={styles.plusToCartBtn}>+</button>
+                        </div>
+                        <button className={styles.removeFromCartButton}>
+                          Remove
+                        </button>
+                      </div>
+                    )}
                   </div>
                   <form>
                     <div className={styles.radioButtonsWrapper}>
