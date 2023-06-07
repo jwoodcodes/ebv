@@ -8,7 +8,7 @@ import MarketAndMessage from "@/components/home/MarketAndMessage";
 import LowerBanner from "@/components/home/LowerBanner";
 import Footer from "@/components/home/Footer";
 import { Great_Vibes } from "@next/font/google";
-import Cart from "./Cart";
+import { ShoppingCartProvider } from "@/context/ShoppingCartContext";
 
 const great_vibes = Great_Vibes({
   subsets: ["latin"],
@@ -24,25 +24,27 @@ export default function Home() {
       </Head>
 
       <main>
-        <MainNav />
-        <div className={styles.aboveMainImage}>
-          <div className={great_vibes.className}>
-            <h1 className={styles.mainTitle}>ElderBlossom View</h1>
+        <ShoppingCartProvider>
+          <MainNav />
+          <div className={styles.aboveMainImage}>
+            <div className={great_vibes.className}>
+              <h1 className={styles.mainTitle}>ElderBlossom View</h1>
+            </div>
           </div>
-        </div>
-        <div className={styles.mainImgWrapper}>
-          <Image
-            src="/stage-with-crowd.webp"
-            className={styles.mainImg}
-            fill
-            lazy="true"
-            alt="Crowd enjoying band at winery"
-          ></Image>
-        </div>
-        <Banner />
-        <MarketAndMessage />
-        <LowerBanner />
-        <Footer />
+          <div className={styles.mainImgWrapper}>
+            <Image
+              src="/stage-with-crowd.webp"
+              className={styles.mainImg}
+              fill
+              lazy="true"
+              alt="Crowd enjoying band at winery"
+            ></Image>
+          </div>
+          <Banner />
+          <MarketAndMessage />
+          <LowerBanner />
+          <Footer />
+        </ShoppingCartProvider>
       </main>
     </>
   );

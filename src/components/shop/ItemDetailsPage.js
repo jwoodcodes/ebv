@@ -3,13 +3,19 @@ import Image from "next/image";
 import styles from "@/styles/ItemDetailsPage.module.css";
 import Footer from "../home/Footer";
 import React from "react";
+import { useShoppingCart } from "@/context/ShoppingCartContext";
 
 export default function ItemDetailsPage({ item, data }) {
   const [deliveryMethod, setDeliveryMthod] = React.useState("shipping");
-
+  const {
+    getItemQuantity,
+    increaseCartQuantity,
+    decreaseCartQuantity,
+    removeFromCart,
+  } = useShoppingCart();
   //   console.log({ data });
   let itemsArray;
-  const quantity = 1;
+  let quantity;
 
   {
     data.map((items) => {
@@ -22,7 +28,8 @@ export default function ItemDetailsPage({ item, data }) {
       <MainNav />
       <div className={styles.itemTitle}>{item}</div>
       {itemsArray.map((product, index) => {
-        // console.log(product);
+        console.log(product.APIid);
+        const quantity = getItemQuantity(product.APIid);
         if (item === product.title) {
           return (
             <div className={styles.mainWrapper} key={index}>
@@ -42,7 +49,10 @@ export default function ItemDetailsPage({ item, data }) {
                   <div className={styles.addToCartWrapper}>
                     {/* <button className={styles.removeOneFromCartBtn}>-1</button> */}
                     {quantity === 0 ? (
-                      <button className={styles.addToCartButton}>
+                      <button
+                        className={styles.addToCartButton}
+                        onClick={() => increaseCartQuantity(product.APIid)}
+                      >
                         + Add To Cart
                       </button>
                     ) : (
@@ -56,7 +66,12 @@ export default function ItemDetailsPage({ item, data }) {
                             styles.cartAddOrRemoveIfItemIsInCartAlready
                           }
                         >
-                          <button className={styles.minusFromCartBtn}>-</button>
+                          <button
+                            className={styles.minusFromCartBtn}
+                            onClick={() => decreaseCartQuantity(product.APIid)}
+                          >
+                            -
+                          </button>
                           <div
                             className={styles.howManyInCartTextWhenItemIsInCart}
                           >
@@ -66,9 +81,17 @@ export default function ItemDetailsPage({ item, data }) {
                             {""}
                             in cart
                           </div>
-                          <button className={styles.plusToCartBtn}>+</button>
+                          <button
+                            className={styles.plusToCartBtn}
+                            onClick={() => increaseCartQuantity(product.APIid)}
+                          >
+                            +
+                          </button>
                         </div>
-                        <button className={styles.removeFromCartButton}>
+                        <button
+                          className={styles.removeFromCartButton}
+                          onClick={() => removeFromCart(product.APIid)}
+                        >
                           Remove
                         </button>
                       </div>
