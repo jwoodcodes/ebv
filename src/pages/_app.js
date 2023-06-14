@@ -1,5 +1,7 @@
 import "../styles/globals.css";
 
+import { ShoppingCartProvider } from "@/context/ShoppingCartContext";
+
 import { Playfair_Display } from "@next/font/google";
 
 const playfair_display = Playfair_Display({
@@ -9,8 +11,10 @@ const playfair_display = Playfair_Display({
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={playfair_display.className}>
-      <Component {...pageProps} />
-    </main>
+    <ShoppingCartProvider>
+      <main className={playfair_display.className}>
+        <Component {...pageProps} />
+      </main>
+    </ShoppingCartProvider>
   );
 }

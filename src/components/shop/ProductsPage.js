@@ -4,8 +4,6 @@ import ItemCard from "@/components/shop/ItemCard";
 import Shop from "@/pages/Shop";
 
 function ProductsPage({ itemsObject }) {
-  // console.log(itemsObject);
-
   return (
     <ul className={styles.gridWrapper}>
       {itemsObject.map((item, index) => {

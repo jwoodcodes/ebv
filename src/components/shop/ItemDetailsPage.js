@@ -5,7 +5,7 @@ import Footer from "../home/Footer";
 import React from "react";
 import { useShoppingCart } from "@/context/ShoppingCartContext";
 
-export default function ItemDetailsPage({ item, data }) {
+export default function ItemDetailsPage({ itemName, data }) {
   const [deliveryMethod, setDeliveryMthod] = React.useState("shipping");
   const {
     getItemQuantity,
@@ -23,14 +23,17 @@ export default function ItemDetailsPage({ item, data }) {
       itemsArray = items.allShopData;
     });
   }
+
   return (
     <div>
       <MainNav />
-      <div className={styles.itemTitle}>{item}</div>
+      <div className={styles.itemTitle}>{itemName}</div>
       {itemsArray.map((product, index) => {
-        console.log(product.APIid);
+        // console.log(product.APIid);
         const quantity = getItemQuantity(product.APIid);
-        if (item === product.title) {
+        // console.log(itemName, product.title);
+        // console.log(product.APIid);
+        if (itemName === product.title) {
           return (
             <div className={styles.mainWrapper} key={index}>
               <div className={styles.imgWrapper}>
@@ -51,7 +54,9 @@ export default function ItemDetailsPage({ item, data }) {
                     {quantity === 0 ? (
                       <button
                         className={styles.addToCartButton}
-                        onClick={() => increaseCartQuantity(product.APIid)}
+                        onClick={() =>
+                          increaseCartQuantity(product.APIid, product)
+                        }
                       >
                         + Add To Cart
                       </button>
