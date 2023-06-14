@@ -25,7 +25,7 @@ const ShopItem = ({ products }) => {
   return (
     <>
       {state === true ? (
-        <ItemDetailsPage item={router.query.ShopItem} data={products} />
+        <ItemDetailsPage itemName={router.query.ShopItem} data={products} />
       ) : (
         "Router is not ready"
       )}
