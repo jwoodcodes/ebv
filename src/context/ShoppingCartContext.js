@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactNode, createContext, useContext } from "react";
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 
 export const ShoppingCartContext = createContext({});
 
@@ -9,32 +10,52 @@ export function useShoppingCart() {
 
 export function ShoppingCartProvider({ children }) {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [cartItems, setCartItems] = React.useState([]);
+  const [cartItems, setCartItems] = useLocalStorage(0, []);
 
-  const cartQuantity = cartItems.reduce(
-    (quantity, item) => item.quantity + quantity,
-    0
-  );
+  let cartQuantity = 0;
+
+  // React.useEffect(() => {
+  //   setCartItems([]);
+  // }, []);
+
+  React.useEffect(() => {
+    if (cartItems) {
+      // console.log(cartItems.length);
+      if (cartItems) {
+        let cartQuantity = cartItems.reduce(
+          (quantity, item) => item.quantity + quantity,
+          0
+        );
+      }
+    }
+  }, [cartItems]);
 
   const openCart = () => setIsOpen(true);
   const closeCart = () => setIsOpen(false);
 
   function increaseCartQuantity(id, data) {
-    // console.log(id);
+    // console.log(id, data);
+    // console.log(data);
+    // console.log(cartItems);
+
+    ///
     setCartItems((curritems) => {
-      if (curritems.find((item) => curritems[0].id === id) == null) {
-        console.log(curritems);
-        return [...curritems, { id, data, quantity: 1 }];
-      } else {
+      // console.log(curritems);
+      if (curritems) {
+        // if (curritems.find((item) => curritems[0].id === id) == null) {
+        //   return [...curritems, { id, data, quantity: 1 }];
+        // } else {
         return curritems.map((item) => {
           if (item.id === id) {
             return { ...item, quantity: item.quantity + 1 };
-          } else {
-            return item;
           }
         });
       }
     });
+
+    if (!cartItems) {
+      return setCartItems([{ id, data, quantity: 1 }]);
+    }
   }
 
   function decreaseCartQuantity(id) {
@@ -54,12 +75,22 @@ export function ShoppingCartProvider({ children }) {
   }
 
   function getItemQuantity(id) {
-    return cartItems.find((item) => item.id)?.quantity || 0;
+    let placeholder = 0;
+    if (cartItems) {
+      if (cartItems.length > 0) {
+        // console.log(cartItems);
+        return cartItems.find((item) => item.id).quantity;
+      }
+    }
+    if (!cartItems) {
+      return 0;
+    }
   }
 
   function removeFromCart(id) {
     setCartItems((curritems) => {
-      return curritems.filter((item) => item.id !== id);
+      curritems.filter((item) => item.id !== id);
+      return 0;
     });
   }
 

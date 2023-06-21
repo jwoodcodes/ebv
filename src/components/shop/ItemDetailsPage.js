@@ -31,6 +31,7 @@ export default function ItemDetailsPage({ itemName, data }) {
       {itemsArray.map((product, index) => {
         // console.log(product.APIid);
         const quantity = getItemQuantity(product.APIid);
+        console.log(quantity);
         // console.log(itemName, product.title);
         // console.log(product.APIid);
         if (itemName === product.title) {
