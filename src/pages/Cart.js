@@ -14,7 +14,7 @@ export default function Cart(ShoppingCartProps) {
         console.log(cartQuantity);
 
         return (
-          <div className={styles.cartItemWrapper}>
+          <div key={item.data.APIid} className={styles.cartItemWrapper}>
             <Image
               src={item.data.imgsrc}
               width="250"
