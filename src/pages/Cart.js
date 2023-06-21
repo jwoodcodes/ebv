@@ -27,7 +27,7 @@ export default function Cart(ShoppingCartProps) {
             <div>{item.data.title}</div>
             <div>{item.data.actualPrice}</div>
             <div>
-              `Total Price: ${+item.data.actualPrice.slice(1) * cartQuantity}`
+              {/* `Total Price: ${+item.data.actualPrice.slice(1) * cartQuantity}` */}
             </div>
           </div>
         );
