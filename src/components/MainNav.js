@@ -6,6 +6,7 @@ import { useShoppingCart } from "@/context/ShoppingCartContext";
 
 export default function MainNav() {
   const { openCart, cartQuantity } = useShoppingCart();
+  // console.log(cartQuantity);
   return (
     <nav className={styles.mainNav}>
       <div className={styles.navLogoWrapper}>

@@ -10,25 +10,50 @@ export function useShoppingCart() {
 
 export function ShoppingCartProvider({ children }) {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [cartItems, setCartItems] = useLocalStorage(0, []);
-
-  let cartQuantity = 0;
+  const [cartItems, setCartItems] = useLocalStorage("cart-items", []);
 
   // React.useEffect(() => {
   //   setCartItems([]);
   // }, []);
+  let cartQuantity = 0;
 
-  React.useEffect(() => {
-    if (cartItems) {
-      // console.log(cartItems.length);
-      if (cartItems) {
-        let cartQuantity = cartItems.reduce(
-          (quantity, item) => item.quantity + quantity,
-          0
-        );
-      }
-    }
-  }, [cartItems]);
+  // React.useEffect(() => {
+  console.log(cartItems);
+  if (cartItems[0] && cartItems !== null) {
+    // console.log(cartItems);
+    cartQuantity = cartItems.reduce(
+      (quantity, item) => item.quantity + quantity,
+      0
+    );
+  }
+
+  // let cartQuantity;
+
+  // React.useEffect(() => {
+  //   // console.log(cartItems.length);
+  //   if (cartItems.length === 0) {
+  //     let cartQuantity = 0;
+  //   }
+
+  //   if (cartItems.length > 0) {
+  //     console.log(cartItems);
+  //     cartItems.map(function (item) {
+  //       console.log(item);
+  //       // let cartQuantity = item.quantity;
+  //       let cartQuantity = 0;
+  //       return cartQuantity;
+  //     });
+
+  //     // let cartQuantity = cartItems.reduce(
+  //     //   (quantity, item) => item.quantity + quantity,
+  //     //   0
+  //     // );
+
+  //     // let cartQuantity = cartItems.reduce(function (quantity, item) {
+  //     //   item.quantity + quantity, 0;
+  //     // });
+  //   }
+  // }, [cartItems]);
 
   const openCart = () => setIsOpen(true);
   const closeCart = () => setIsOpen(false);
@@ -36,26 +61,44 @@ export function ShoppingCartProvider({ children }) {
   function increaseCartQuantity(id, data) {
     // console.log(id, data);
     // console.log(data);
-    // console.log(cartItems);
-
+    if (!cartItems[0]) {
+      // console.log(cartItems);
+      return setCartItems([{ id, data, quantity: 1 }]);
+    }
+    // console.log(cartItems[0]);
     ///
     setCartItems((curritems) => {
       // console.log(curritems);
-      if (curritems) {
-        // if (curritems.find((item) => curritems[0].id === id) == null) {
-        //   return [...curritems, { id, data, quantity: 1 }];
-        // } else {
-        return curritems.map((item) => {
-          if (item.id === id) {
-            return { ...item, quantity: item.quantity + 1 };
-          }
-        });
-      }
-    });
 
-    if (!cartItems) {
-      return setCartItems([{ id, data, quantity: 1 }]);
-    }
+      if (cartItems.length === 0 || curritems === null) {
+        // console.log(id, data);
+        return { id, data, quantity: 1 };
+      }
+
+      if (cartItems.length > 0) {
+        if (curritems.find((item) => curritems[0].id === id) == null) {
+          return [...curritems, { id, data, quantity: 1 }];
+        } else {
+          return curritems.map((item) => {
+            if (item.id === id) {
+              return { ...item, id, quantity: item.quantity + 1 };
+            }
+          });
+          //       if (item.id === id) {
+          // return { id, quantity: item.quantity + 1 };
+        }
+
+        //   if (curritems) {
+        //     // if (curritems.find((item) => curritems[0].id === id) == null) {
+        //     //   return [...curritems, { id, data, quantity: 1 }];
+        //     // } else {
+        //     return curritems.map((item) => {
+        //       if (item.id === id) {
+        //         return { ...item, id, quantity: item.quantity + 1 };
+        //       }
+      }
+      //   }
+    });
   }
 
   function decreaseCartQuantity(id) {
@@ -75,16 +118,35 @@ export function ShoppingCartProvider({ children }) {
   }
 
   function getItemQuantity(id) {
-    let placeholder = 0;
-    if (cartItems) {
-      if (cartItems.length > 0) {
-        // console.log(cartItems);
-        return cartItems.find((item) => item.id).quantity;
-      }
-    }
-    if (!cartItems) {
-      return 0;
-    }
+    // console.log(id);
+    // let placeholder = 0;
+    // let testValue;
+
+    return cartItems.find((item) => item.id === id)?.quantity || 0;
+
+    // if (cartItems && cartItems !== null) {
+    //   // console.log(cartItems);
+
+    //   if (cartItems.length > 0) {
+    //     testValue = cartItems.forEach(function (item) {
+    //       // console.log(item.quantity);
+
+    //       if (item.id) {
+    //         if (item.id === id) {
+    //           // console.log(item.quantity);
+    //           return item.quantity;
+    //         }
+    //       }
+    //       console.log(testValue);
+    //       return testValue;
+    //     });
+
+    //     if ((cartItems && !cartItems[0]) || cartItems === null) {
+    //       return 0;
+    //     }
+    //     // console.log(cartItems);
+    //   }
+    // }
   }
 
   function removeFromCart(id) {
