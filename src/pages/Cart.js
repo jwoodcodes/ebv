@@ -11,7 +11,7 @@ export default function Cart(ShoppingCartProps) {
         <MainNav />
         <div className={styles.cartTitle}>Cart Checkout</div>
         {cartItems.map((item) => {
-          console.log(item.data);
+          // console.log(item.data);
           console.log(cartQuantity);
 
           return (
