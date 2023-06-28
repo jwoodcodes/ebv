@@ -16,13 +16,15 @@ export function useLocalStorage(key, defaultValue) {
   const [value, setValue] = React.useState(() => {
     let currentValue;
 
-    try {
-      //   console.log(key);
-      currentValue = JSON.parse(localStorage.getItem(key) || String([]));
-    } catch (error) {
-      currentValue = [];
+    if (typeof window !== "undefined") {
+      try {
+        //   console.log(key);
+        currentValue = JSON.parse(localStorage.getItem(key) || String([]));
+      } catch (error) {
+        currentValue = [];
+      }
+      // console.log(currentValue);
     }
-    // console.log(currentValue);
     return currentValue;
   });
 
