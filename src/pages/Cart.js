@@ -23,7 +23,7 @@ export default function Cart(ShoppingCartProps) {
     );
   }
 
-  if (!cartItems) {
+  if (!cartItems || cartQuantity === 0) {
     return <div>Cart is empty</div>;
   }
 }

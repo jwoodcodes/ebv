@@ -10,6 +10,7 @@ export default function AllCheckoutItemsPriceAndCheckoutButton({ data }) {
     <>
       {data.map((data) => {
         newData = {
+          key: data.id,
           id: data.id,
           actualPrice: data.data.actualPrice,
           alttext: data.data.alttext,
@@ -21,7 +22,7 @@ export default function AllCheckoutItemsPriceAndCheckoutButton({ data }) {
         };
 
         itemTotalPrice = +newData.actualPrice.slice(1) * newData.quantity;
-        console.log(typeof itemTotalPrice);
+        // console.log(typeof itemTotalPrice);
         totalCheckoutPrice = totalCheckoutPrice + itemTotalPrice;
         formattedTotalCheckoutPrice = `$${totalCheckoutPrice}.00`;
       })}
