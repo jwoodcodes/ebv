@@ -10,6 +10,9 @@ export default function TableHead({ columns }) {
     <thead>
       <tr>
         {columns.map(({ label, accessor }) => {
+          if (label === "Item Image") {
+            return <th key={accessor}></th>;
+          }
           return <th key={accessor}>{label}</th>;
         })}
       </tr>

@@ -1,4 +1,5 @@
 import styles from "@/styles/table.module.css";
+import Image from "next/image";
 
 export default function TableBody({ tableData, columns }) {
   //   console.log(tableData);
@@ -26,26 +27,37 @@ export default function TableBody({ tableData, columns }) {
 
               //   console.log(newData);
 
-              console.log(newData[accessor]);
+              //   console.log(+newData.actualPrice.slice(1));
+              let totalPrice = +newData.actualPrice.slice(1) * newData.quantity;
+              //   console.log(totalPrice);
 
               const tData = newData[accessor] ? newData[accessor] : "——";
-
-              return <td key={accessor}>{tData}</td>;
+              if (tData !== "——") {
+                if (newData[accessor] === newData.imgsrc) {
+                  // console.log(newData[accessor]);
+                  return (
+                    <td key={accessor}>
+                      <Image
+                        src={newData[accessor]}
+                        width="200"
+                        height="200"
+                        priority
+                        alt={newData.alttext}
+                        key={newData.APIid}
+                        className={styles.cartImg}
+                      />
+                    </td>
+                  );
+                }
+                return <td key={accessor}>{tData}</td>;
+              }
+              if (tData === "——") {
+                return <td key={accessor}>{`$${totalPrice}.00`}</td>;
+              }
             })}
           </tr>
         );
       })}
-      {/* <tr key={tableData.id}>
-        {columns.map(({ accessor, index }) => {
-          //   console.log(data.myOverallRank);
-          //   console.log(data);
-          //   console.log(data.imgsrc);
-          console.log(tableData[accessor]);
-
-          const tData = tableData[accessor];
-          return <td key={accessor}>{tData}</td>;
-        })}
-      </tr> */}
     </tbody>
   );
 }
