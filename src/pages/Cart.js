@@ -15,6 +15,7 @@ export default function Cart(ShoppingCartProps) {
         <div className={styles.cartTitle}>Cart Checkout</div>
 
         <Table data={cartItems} />
+
         <AllCheckoutItemsPriceAndCheckoutButton data={cartItems} />
         <div className={styles.footerWrapper}>
           <Footer />
