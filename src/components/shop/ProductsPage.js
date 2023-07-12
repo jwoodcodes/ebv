@@ -8,6 +8,7 @@ function ProductsPage({ itemsObject }) {
     <ul className={styles.gridWrapper}>
       {itemsObject.map((item, index) => {
         // console.log(item.alttext);
+
         if (item.type === "Product") {
           return (
             <ItemCard

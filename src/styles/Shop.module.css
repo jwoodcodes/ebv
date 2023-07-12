@@ -57,13 +57,15 @@
 .cardWrapper {
   max-width: 28rem;
   min-width: 25rem;
+  height: 36rem;
   max-height: 34rem;
   background: linear-gradient(to right bottom, #065a60, #420c47);
   font-family: "Playfair Display", serif;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
   color: #fff;
   font-size: 1.6rem;
-  border-radius: 12%;
+
+  border-radius: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -76,7 +78,7 @@
 }
 
 .cardWrapper:hover .cardImage {
-  transform: scale(0.925) translateY(0.4rem);
+  transform: scale(0.95) translateY(0.4rem);
 }
 
 .cardWrapper:hover .cardItemTitle {
@@ -85,12 +87,12 @@
 
 .cardWrapper:hover .cardItemPrice {
   transform: translateY(-0.5rem) scale(0.9);
-  padding-bottom: 0.25rem;
+  padding-bottom: 2rem;
 }
 
 .cardImage {
   border-radius: 10%;
-  margin-top: 1.75rem;
+  margin-top: 1.25rem;
 }
 
 .cardItemTitle {
@@ -103,7 +105,8 @@
   text-align: center;
 }
 .cardItemPrice {
-  padding-bottom: 0.75rem;
+  padding-bottom: 2.75rem;
+  height: 1rem;
 }
 
 .cardMoreDetails {

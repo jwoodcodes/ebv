@@ -143,8 +143,12 @@ export default function ItemDetailsPage({ itemName, data }) {
                       </div>
                     </div>
                   </form>
-                  <div className={styles.itemDescription}>
-                    Description <br /> {product.description}
+                  <div className={styles.itemDescriptionWrapper}>
+                    <div className={styles.descriptionSpan}>Description</div>
+                    <div className={styles.itemDescription}>
+                      {" "}
+                      {product.description}
+                    </div>
                   </div>
                 </div>
               </div>

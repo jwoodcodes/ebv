@@ -163,9 +163,25 @@
   letter-spacing: 0.2rem;
 }
 
+.itemDescriptionWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .itemDescription {
   font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
   margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.descriptionSpan {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  padding-top: 2rem;
 }
