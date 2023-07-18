@@ -2,7 +2,7 @@
   text-align: center;
   margin-top: 5rem;
   margin-bottom: 5rem;
-  font-size: 4.5rem;
+  font-size: 4.75rem;
   letter-spacing: 0.25rem;
   background: linear-gradient(to right bottom, #420c47, #065a60);
   -webkit-background-clip: text;
@@ -12,4 +12,40 @@
 .aboveTableText {
   text-align: center;
   font-size: 1.25rem;
+}
+
+.toShopLinkWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.toShopLink {
+  background-color: #065a60;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  font-size: 1.25rem;
+  height: 4.5rem;
+  width: 18rem;
+  max-width: 18rem;
+  border-radius: 10px;
+  border: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.toShopLink:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  background-color: #08565c;
+  transform: translateY(-0.25rem);
+  transition: all 0.15s;
+}
+
+.toShopLink:active {
+  transform: translateY(0);
+  transition: all 0.15s;
 }

@@ -33,10 +33,10 @@ export default function MainNav() {
           <Link href="/Events">Events</Link>
         </li>
         <li>
-          <Link href="/Contact">Contact</Link>
+          <Link href="/Venue">Venue</Link>
         </li>
         <li>
-          <Link href="/Venue">Venue</Link>
+          <Link href="/Contact">Contact</Link>
         </li>
       </div>
       <div className={styles.SignInAndCart}>
