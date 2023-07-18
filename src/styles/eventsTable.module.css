@@ -8,7 +8,8 @@
 .table {
   width: 100%;
   border-spacing: 0;
-  border-bottom: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a34;
+  margin-bottom: 10rem;
 }
 
 .caption {
@@ -66,4 +67,9 @@ th.down {
 
 .cartImg {
   border-radius: 50%;
+}
+
+.table tbody td:last-child {
+  max-width: 37rem;
+  padding: 17px;
 }

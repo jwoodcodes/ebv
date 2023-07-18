@@ -13,7 +13,7 @@ export default function EventsTable({ data }) {
     { label: "price", accessor: "price" },
     { label: "Date", accessor: "date" },
     { label: "Time", accessor: "time" },
-    { label: "Food Truck", accessor: "foodtruck" },
+    { label: "Food Truck", accessor: "foodTruck" },
     { label: "Description", accessor: "description" },
   ];
 
