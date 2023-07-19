@@ -8,8 +8,8 @@ export default function Footer() {
       <Image
         src="/ebvLogo.jfif"
         className={styles.headerLogo}
-        width={100}
-        height={100}
+        width={90}
+        height={90}
         alt="ElderBlossom View Logo"
       ></Image>
       <div className={styles.copyWrapper}>

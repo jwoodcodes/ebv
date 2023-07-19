@@ -8,6 +8,7 @@ import MarketAndMessage from "@/components/home/MarketAndMessage";
 import LowerBanner from "@/components/home/LowerBanner";
 import Footer from "@/components/home/Footer";
 import { Great_Vibes } from "@next/font/google";
+import { Playfair_Display } from "@next/font/google";
 
 const great_vibes = Great_Vibes({
   subsets: ["latin"],
@@ -22,7 +23,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main>
+      <main className={styles.wholeWrapper}>
         <MainNav />
         <div className={styles.aboveMainImage}>
           <div className={great_vibes.className}>

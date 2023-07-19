@@ -40,12 +40,13 @@ export default function MainNav() {
         </li>
       </div>
       <div className={styles.SignInAndCart}>
-        <li>
+        {/* <li>
           <button className={styles.loginButton}>Login</button>
-        </li>
+        </li> */}
 
         <li>
           <Link href="/Cart" className={styles.cart} onFocus={openCart}>
+            <div className={styles.navCartText}>Cart</div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 576 512"
