@@ -1,11 +1,17 @@
+.wholeWrapper {
+  height: 100%;
+
+  @media only screen and (max-width: 75em) {
+    font-size: 95%;
+  }
+}
+
 .mainTitle {
   position: absolute;
   top: 9vw;
   margin: auto;
   left: 5rem;
   right: 5rem;
-  /* font-family: "Great Vibes", cursive; */
-  /* font-family: "Great_Vibes"; */
 
   background: linear-gradient(to right bottom, #420c47, #065a60);
   -webkit-background-clip: text;
@@ -14,6 +20,16 @@
   font-size: 4.3rem;
   letter-spacing: 1.5rem;
   z-index: 2;
+
+  @media only screen and (max-width: 75em) {
+    font-size: 3.3rem;
+    top: 12vw;
+  }
+
+  @media (max-width: 62.5em) {
+    font-size: 3rem;
+    top: 15vw;
+  }
 }
 
 .aboveMainImage {
@@ -26,6 +42,11 @@
   position: relative;
   height: 80vh;
   max-height: 80vh;
+
+  @media only screen and (max-width: 62.5em) {
+    height: 70vh;
+    max-height: 70vh;
+  }
 }
 
 .mainNav {
@@ -62,6 +83,11 @@
   flex-grow: 12;
   padding-right: 6rem;
   padding-left: 4rem;
+
+  @media only screen and (max-width: 62.5em) {
+    padding-right: 4rem;
+    padding-left: 2rem;
+  }
 }
 
 .mainNav li {
@@ -80,6 +106,10 @@
   color: #fff;
   letter-spacing: 1.5px;
   font-size: 1.3rem;
+
+  @media only screen and (max-width: 62.5em) {
+    font-size: 1.1rem;
+  }
 }
 
 .SignInAndCart {
@@ -90,18 +120,6 @@
   flex-grow: 1;
 }
 
-.loginButton {
-  background-color: inherit;
-  color: #fff;
-
-  letter-spacing: 1.5px;
-  font-size: 1.3rem;
-  border: none;
-  margin-left: -1.5rem;
-
-  cursor: pointer;
-}
-
 .loginButton:hover {
   background: #fff;
   -webkit-background-clip: text;
@@ -109,16 +127,28 @@
 }
 
 .cart {
-  margin-left: 1rem;
+  /* margin-left: 2rem; */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.navCartText {
+  /* margin-left: -1rem; */
+
+  padding-right: 2rem;
+
+  @media only screen and (max-width: 62.5em) {
+    padding-right: 2rem;
+    padding-left: 1.25rem;
+  }
 }
 
 .cart_btn {
   height: 1.5rem;
   width: 1.5rem;
   position: absolute;
+  margin-left: 2.75rem;
 }
 
 .navCartNumberIcon {
@@ -126,11 +156,16 @@
 
   top: 0;
   right: 0;
-  transform: translate(125%, -10%);
+  transform: translate(80%, -10%);
   font-size: 1.45rem;
   border-radius: 50%;
   width: 1rem;
   height: 4rem;
+
+  @media only screen and (max-width: 62.5em) {
+    transform: translate(25%, -1%);
+    font-size: 1.25rem;
+  }
 }
 
 .banner {
@@ -140,6 +175,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 62.5em) {
+    height: 60vh;
+  }
 }
 
 .bannerTextWrapper {
@@ -154,6 +193,14 @@
   font-family: "Playfair Display", serif;
   font-size: 3.25rem;
   letter-spacing: 0.1rem;
+
+  @media only screen and (max-width: 75em) {
+    font-size: 2.3rem;
+  }
+
+  @media only screen and (max-width: 62.5em) {
+    font-size: 2rem;
+  }
 }
 
 .bannerShopLink {
@@ -203,6 +250,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 75em) {
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (max-width: 62.5em) {
+    font-size: 1.25rem;
+  }
 }
 
 .lowerBannerText {
@@ -224,6 +279,9 @@
 
 .footerLogo {
   border-radius: 50%;
+
+  @media only screen and (max-width: 75em) {
+  }
 }
 
 .copyWrapper {

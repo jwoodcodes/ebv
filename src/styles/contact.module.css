@@ -1,0 +1,107 @@
+.heading {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+  font-size: 3rem;
+  letter-spacing: 0.25rem;
+  background: linear-gradient(to right bottom, #420c47, #065a60);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* color: #065a60; */
+}
+
+.aboveFormTextWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  margin-top: 2rem;
+}
+
+.aboveFormText {
+  text-align: center;
+}
+
+.aboveFormParagraph {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.phoneNumber {
+  background: linear-gradient(to right bottom, #420c47, #065a60);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.imgAndFormWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.galImg {
+  border-radius: 10px;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 5rem;
+  margin-bottom: 5rem;
+}
+
+.label {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.nameField,
+.emailField {
+  width: 25dvw;
+  margin-bottom: 2rem;
+}
+
+.textField {
+  height: 6rem;
+}
+
+.submitBtn {
+  background-color: #065a60;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  font-size: 1.25rem;
+  height: 3.5rem;
+  width: 18rem;
+  max-width: 18rem;
+  border-radius: 10px;
+  border: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 5rem auto 1rem;
+}
+
+.submitBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  background-color: #08565c;
+  transform: translateY(-0.25rem);
+  transition: all 0.15s;
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+  transition: all 0.15s;
+}

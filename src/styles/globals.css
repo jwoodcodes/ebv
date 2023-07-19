@@ -17,6 +17,11 @@
 html,
 body {
   height: 100%;
+
+  --largest: 75em;
+  --large: 62.5em;
+  --medium: 50em;
+  --small: 37.5em;
 }
 
 /*
