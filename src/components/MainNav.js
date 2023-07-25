@@ -13,8 +13,8 @@ export default function MainNav() {
         <Image
           src="/ebvLogo.jfif"
           className={styles.headerLogo}
-          width={50}
-          height={50}
+          width={40}
+          height={40}
           alt="ElderBlossom View Logo"
         ></Image>
       </div>
