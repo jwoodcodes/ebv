@@ -453,6 +453,9 @@
   @media (max-width: 410px) {
     font-size: 1.25rem;
   }
+  @media (max-width: 330px) {
+    font-size: 1rem;
+  }
 }
 
 .lowerBanner {
@@ -493,6 +496,10 @@
   @media (max-width: 400px) {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+  @media (max-width: 400px) {
+    font-size: 0.9rem;
+    line-height: 1.25rem;
   }
 }
 
