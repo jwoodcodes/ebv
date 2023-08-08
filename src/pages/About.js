@@ -14,8 +14,8 @@ export default function About() {
           <Image
             src="/ebvLogo.jfif"
             className={styles.footerLogo}
-            width={525}
-            height={525}
+            width={450}
+            height={450}
             alt="ElderBlossom View Logo"
           ></Image>
         </div>
