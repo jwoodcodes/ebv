@@ -31,7 +31,7 @@ export default function ItemCard({
         className={styles.cardMoreDetails}
         title={`${title}`}
       >
-        Full Description & To Order &rarr;
+        Description & To Order &rarr;
       </Link>
     </div>
   );

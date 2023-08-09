@@ -36,11 +36,11 @@ export default function TableBody({ tableData, columns }) {
                 if (newData[accessor] === newData.imgsrc) {
                   // console.log(newData[accessor]);
                   return (
-                    <td key={accessor}>
+                    <td key={accessor} className={styles.cartImgWrapper}>
                       <Image
                         src={newData[accessor]}
-                        width="200"
-                        height="200"
+                        width="150"
+                        height="150"
                         priority
                         alt={newData.alttext}
                         key={newData.APIid}
