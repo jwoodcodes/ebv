@@ -158,7 +158,7 @@
     height: 60vh;
   }
 }
-@media (max-width: 455px) {
+@media (max-width: 475px) {
   .paragraphWrapper {
     font-size: 1rem;
   }
