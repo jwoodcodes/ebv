@@ -14,7 +14,8 @@ export default function MarketAndMessage() {
         ></Image>
       </Link>
       <div className={styles.marketMessage}>
-        Join us at the Columbia Farmers Market!
+        Join us at the Columbia <br />
+        Farmers Market!
       </div>
     </div>
   );
