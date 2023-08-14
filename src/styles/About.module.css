@@ -63,7 +63,7 @@
 }
 @media (max-width: 550px) {
   .mainWrapper {
-    height: 210vw;
+    height: 230vw;
   }
 }
 @media (max-width: 500px) {
@@ -71,7 +71,7 @@
     height: 225vw;
   }
 }
-@media (max-width: 460px) {
+@media (max-width: 475px) {
   .mainWrapper {
     height: 250vw;
   }
@@ -79,6 +79,11 @@
 @media (max-width: 415px) {
   .mainWrapper {
     height: 275vw;
+  }
+}
+@media (max-width: 375px) {
+  .mainWrapper {
+    height: 290vw;
   }
 }
 
@@ -155,12 +160,23 @@
 }
 @media (max-width: 550px) {
   .paragraphWrapper {
-    height: 60vh;
+    height: 150vw;
   }
 }
 @media (max-width: 475px) {
   .paragraphWrapper {
     font-size: 1rem;
+    height: 160vw;
+  }
+}
+@media (max-width: 400px) {
+  .paragraphWrapper {
+    height: 170vw;
+  }
+}
+@media (max-width: 375px) {
+  .paragraphWrapper {
+    height: 190vw;
   }
 }
 
