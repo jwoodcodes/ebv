@@ -63,7 +63,22 @@
 }
 @media (max-width: 550px) {
   .mainWrapper {
-    height: 100vh;
+    height: 210vw;
+  }
+}
+@media (max-width: 500px) {
+  .mainWrapper {
+    height: 225vw;
+  }
+}
+@media (max-width: 460px) {
+  .mainWrapper {
+    height: 250vw;
+  }
+}
+@media (max-width: 415px) {
+  .mainWrapper {
+    height: 275vw;
   }
 }
 
