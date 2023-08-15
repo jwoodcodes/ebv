@@ -1,4 +1,4 @@
-import styles from "@/styles/table.module.css";
+import styles from "@/styles/eventsTable.module.css";
 import React from "react";
 import Image from "next/image";
 import EventsTableHead from "./eventsTableHead";
@@ -22,8 +22,8 @@ export default function EventsTableBody({ tableData, columns }) {
                   <td key={accessor}>
                     <Image
                       src={data[accessor]}
-                      width="200"
-                      height="200"
+                      width="175"
+                      height="175"
                       priority
                       alt={data.alttext}
                       key={data.id}

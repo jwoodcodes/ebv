@@ -8,10 +8,46 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (max-width: 800px) {
+  .eventsTitle {
+    font-size: 4.5rem;
+    letter-spacing: 0.2rem;
+  }
+}
+@media (max-width: 675px) {
+  .eventsTitle {
+    font-size: 4rem;
+    letter-spacing: 0.15rem;
+  }
+}
+@media (max-width: 600px) {
+  .eventsTitle {
+    font-size: 3.5rem;
+    letter-spacing: 0.15rem;
+  }
+}
+@media (max-width: 525px) {
+  .eventsTitle {
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+  }
+}
 
 .aboveTableText {
   text-align: center;
   font-size: 1.35rem;
+}
+@media (max-width: 675px) {
+  .aboveTableText {
+    font-size: 1.15rem;
+  }
+}
+@media (max-width: 600px) {
+  .aboveTableText {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .toShopLinkWrapper {
@@ -19,6 +55,12 @@
   justify-content: center;
   margin-top: 4rem;
   margin-bottom: 5rem;
+}
+@media (max-width: 600px) {
+  .toShopLinkWrapper {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
 }
 
 .toShopLink {
@@ -35,6 +77,14 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .toShopLink {
+    height: 3.5rem;
+    width: 15rem;
+    max-width: 15rem;
+  }
 }
 
 .toShopLink:hover {
