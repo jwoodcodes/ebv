@@ -30,8 +30,8 @@ export default function Contact() {
           src="/venue photo 12.jpg"
           className={styles.galImg}
           cover
-          height="375"
-          width="475"
+          height="350"
+          width="450"
           alt="cocktails on a stone in a flowing stream"
         ></Image>
         <ContactForm />
@@ -39,8 +39,8 @@ export default function Contact() {
           src="/venue photo 1.jpg"
           className={styles.galImg}
           cover
-          height="375"
-          width="475"
+          height="350"
+          width="450"
           alt="stream and stage"
         ></Image>
       </div>
