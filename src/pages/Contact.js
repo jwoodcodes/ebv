@@ -20,7 +20,7 @@ export default function Contact() {
             {" "}
             Reach out to us and let us know if there is anything we can do for
             you. You can fill out the form below, <br />
-            or call us at{" "}
+            or call us at <br />
             <span className={styles.phoneNumber}>+1 573-268-8597</span>
           </p>
         </section>
@@ -30,8 +30,8 @@ export default function Contact() {
           src="/venue photo 12.jpg"
           className={styles.galImg}
           cover
-          height="350"
-          width="450"
+          height="300"
+          width="400"
           alt="cocktails on a stone in a flowing stream"
         ></Image>
         <ContactForm />
@@ -39,8 +39,8 @@ export default function Contact() {
           src="/venue photo 1.jpg"
           className={styles.galImg}
           cover
-          height="350"
-          width="450"
+          height="300"
+          width="400"
           alt="stream and stage"
         ></Image>
       </div>
