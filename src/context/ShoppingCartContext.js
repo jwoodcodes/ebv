@@ -122,6 +122,12 @@ export function ShoppingCartProvider({ children }) {
     // let placeholder = 0;
     // let testValue;
 
+    // console.log(cartItems);
+
+    if (cartItems === 0) {
+      return;
+    }
+
     return cartItems.find((item) => item.id === id)?.quantity || 0;
 
     // if (cartItems && cartItems !== null) {
