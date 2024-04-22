@@ -67,6 +67,7 @@ export async function getStaticProps() {
     };
   } catch (e) {
     console.error(e);
+    console.log("error in getStaticProps");
   }
 }
 

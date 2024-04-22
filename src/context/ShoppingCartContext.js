@@ -109,9 +109,10 @@ export function ShoppingCartProvider({ children }) {
         return curritems.map((item) => {
           if (item.id === id) {
             return { ...item, quantity: item.quantity - 1 };
-          } else {
-            return item;
           }
+          //   else {
+
+          // });
         });
       }
     });
@@ -122,12 +123,18 @@ export function ShoppingCartProvider({ children }) {
     // let placeholder = 0;
     // let testValue;
 
+    // console.log(cartItems);
+
+    if (cartItems === 0) {
+      return;
+    }
+
     return cartItems.find((item) => item.id === id)?.quantity || 0;
 
     // if (cartItems && cartItems !== null) {
     //   // console.log(cartItems);
 
-    //   if (cartItems.length > 0) {
+    //   if (cartItems.length > 0) {                        zxs
     //     testValue = cartItems.forEach(function (item) {
     //       // console.log(item.quantity);
 

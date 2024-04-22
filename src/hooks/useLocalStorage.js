@@ -13,7 +13,9 @@ export function useLocalStorage(key, defaultValue) {
   //         return json;
   //       }
 
-  const [value, setValue] = React.useState(() => {
+  const [value, setValue] = React.useState(0);
+
+  React.useEffect(() => {
     let currentValue;
 
     if (typeof window !== "undefined") {
@@ -25,7 +27,7 @@ export function useLocalStorage(key, defaultValue) {
       }
       // console.log(currentValue);
     }
-    return currentValue;
+    setValue(currentValue);
   });
 
   //   if (typeof window !== "undefined") {

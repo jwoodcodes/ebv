@@ -43,6 +43,10 @@ export async function getStaticProps() {
 
     const events = await db.collection("upcomingEventsData").find({}).toArray();
 
+    let test = JSON.parse(JSON.stringify(events));
+
+    console.log(typeof test);
+
     return {
       props: { events: JSON.parse(JSON.stringify(events)) },
     };
