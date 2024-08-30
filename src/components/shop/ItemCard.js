@@ -30,7 +30,7 @@ export default function ItemCard({
       <div className={styles.cardItemTitle}>{title}</div>
       <div className={styles.cardItemPrice}>{price}</div>
       <div className={styles.cardMoreDetails}>
-        Description & To Order &rarr;
+        Description & to order &rarr;
       </div>
     </Link>
   );
