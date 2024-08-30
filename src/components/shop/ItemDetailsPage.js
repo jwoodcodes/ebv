@@ -2,6 +2,7 @@ import MainNav from "../MainNav";
 import Image from "next/image";
 import styles from "@/styles/ItemDetailsPage.module.css";
 import Footer from "../home/Footer";
+import Link from "next/link";
 import React from "react";
 import { useShoppingCart } from "@/context/ShoppingCartContext";
 
@@ -28,6 +29,11 @@ export default function ItemDetailsPage({ itemName, data }) {
     <div>
       <MainNav />
       <div className={styles.itemTitle}>{itemName}</div>
+      <div className={styles.backToShopLinkWrapper}>
+      <Link href="/Shop" className={styles.backToShopLink}>
+        ← Back to Shop
+      </Link>
+      </div>
       {itemsArray.map((product, index) => {
         // console.log(product.APIid);
         const quantity = getItemQuantity(product.APIid);

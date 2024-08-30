@@ -40,7 +40,9 @@ export function ShoppingCartProvider({ children }) {
       // console.log(item, item.quantity);
       // console.log(item.quantity);
       // console.log(cartQuantity);
-      cartQuantity = cartQuantity + item.quantity;
+      
+        cartQuantity = cartQuantity + item.quantity;
+      
       // console.log(cartQuantity);
       return cartQuantity;
     });
@@ -103,16 +105,14 @@ export function ShoppingCartProvider({ children }) {
 
   function decreaseCartQuantity(id) {
     setCartItems((curritems) => {
-      if (curritems.find((item) => curritems.id === id)?.quantity === 1) {
+      if (curritems.find((item) => item.id === id)?.quantity === 1) {
         return curritems.filter((item) => item.id !== id);
       } else {
         return curritems.map((item) => {
           if (item.id === id) {
             return { ...item, quantity: item.quantity - 1 };
           }
-          //   else {
-
-          // });
+          return item; // Return unchanged items
         });
       }
     });

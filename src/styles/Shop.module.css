@@ -229,19 +229,19 @@
 
 @media (min-width: 499px) {
   .cardWrapper:hover .cardImage {
-    transform: scale(0.95) translateY(0.4rem);
+    transform: scale(0.9) translateY(0.4rem);
   }
 }
 
 @media (min-width: 499px) {
   .cardWrapper:hover .cardItemTitle {
-    transform: translateY(-0.5rem);
+    transform: translateY(-1.2rem);
   }
 }
 
 @media (min-width: 499px) {
   .cardWrapper:hover .cardItemPrice {
-    transform: translateY(-0.5rem) scale(0.9);
+    transform: translateY(-01.5rem) scale(0.9);
     padding-bottom: 2rem;
   }
 }
@@ -339,7 +339,7 @@
     display: inline;
 
     width: fit-content;
-    transform: translateY(-1rem);
+    transform: translateY(-1.75rem);
     padding-bottom: 1.25rem;
   }
 }

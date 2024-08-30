@@ -17,20 +17,21 @@ export default function Footer() {
         <span>2023</span>
       </div>
       <div className={styles.socialWrapper}>
-        <Link href="https://www.facebook.com/elderblossomview/">
-          <Image
-            src="/facebook.png"
-            width={50}
-            height={50}
-            alt="facebook link"
-          ></Image>
-        </Link>
+        
         <Link href="https://www.instagram.com/elderblossomview/">
           <Image
             src="/instagramLogo.png"
             width={60}
             height={60}
             alt="instagram link"
+          ></Image>
+        </Link>
+        <Link href="https://www.facebook.com/elderblossomview/">
+          <Image
+            src="/facebook.png"
+            width={50}
+            height={50}
+            alt="facebook link"
           ></Image>
         </Link>
       </div>
