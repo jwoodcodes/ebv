@@ -11,7 +11,14 @@ export default function ItemCard({
   height,
 }) {
   return (
-    <div className={styles.cardWrapper}>
+    <Link
+      href={{
+        pathname: "/ShopItemDetails/[title]",
+        query: { title: `${title}` },
+      }}
+      className={styles.cardWrapper}
+      title={`${title}`}
+    >
       <Image
         src={imageURL}
         className={styles.cardImage}
@@ -19,20 +26,12 @@ export default function ItemCard({
         width={width}
         height={height}
         alt={alttext}
-      ></Image>
+      />
       <div className={styles.cardItemTitle}>{title}</div>
       <div className={styles.cardItemPrice}>{price}</div>
-
-      <Link
-        href={{
-          pathname: "/ShopItemDetails/[title]",
-          query: { title: `${title}` },
-        }}
-        className={styles.cardMoreDetails}
-        title={`${title}`}
-      >
-        Description & To Order &rarr;
-      </Link>
-    </div>
+      <div className={styles.cardMoreDetails}>
+        Description & to order &rarr;
+      </div>
+    </Link>
   );
 }

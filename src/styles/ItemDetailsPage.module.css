@@ -41,9 +41,21 @@
 
 .mainWrapper {
   display: flex;
-  height: 80dvw;
+  height: 40dvw;
 
   /* justify-content: space-around; */
+}
+@media (max-width: 1500px) {
+  .mainWrapper {
+    
+    height: 60dvw;
+  }
+}
+@media (max-width: 1075px) {
+  .mainWrapper {
+    
+    height: 70dvw;
+  }
 }
 @media (max-width: 900px) {
   .mainWrapper {
@@ -51,47 +63,47 @@
     justify-content: center;
     align-items: center;
     margin-top: 0;
-    height: 150dvw;
+    height: 130dvw;
   }
 }
 @media (max-width: 875px) {
   .mainWrapper {
-    height: 160dvw;
+    height: 150dvw;
   }
 }
 @media (max-width: 800px) {
   .mainWrapper {
-    height: 175dvw;
+    height: 150dvw;
   }
 }
 @media (max-width: 750px) {
   .mainWrapper {
-    height: 200dvw;
+    height: 160dvw;
   }
 }
 @media (max-width: 675px) {
   .mainWrapper {
-    height: 225dvw;
+    height: 185dvw;
   }
 }
 @media (max-width: 600px) {
   .mainWrapper {
-    height: 250dvw;
+    height: 205dvw;
   }
 }
 @media (max-width: 525px) {
   .mainWrapper {
-    height: 275dvw;
+    height: 225dvw;
   }
 }
 @media (max-width: 475px) {
   .mainWrapper {
-    height: 300dvw;
+    height: 270dvw;
   }
 }
 @media (max-width: 435px) {
   .mainWrapper {
-    height: 325dvw;
+    height: 300dvw;
   }
 }
 @media (max-width: 400px) {
@@ -110,8 +122,39 @@
   }
 }
 
+.backToShopLinkWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.backToShopLink {
+  display: inline-block;
+  margin: 1rem auto ;
+  padding: 0.5rem 1rem;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.backToShopLink:hover {
+  background-color: #e0e0e0;
+}
+
+@media (max-width: 475px) {
+  .backToShopLinkWrapper {
+    margin-bottom: 0rem;
+  }
+}
+
 .imgWrapper {
   width: 50%;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,7 +168,7 @@
 }
 @media (max-width: 450px) {
   .imgWrapper {
-    margin-top: -12rem;
+    margin-top: -1rem;
     margin-bottom: -2rem;
   }
 }
@@ -143,6 +186,7 @@
 
 .orderAndDescWrapper {
   width: 50%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;

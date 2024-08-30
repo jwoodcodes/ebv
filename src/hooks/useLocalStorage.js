@@ -4,21 +4,28 @@ export function useLocalStorage(key, defaultValue) {
   //   console.log(key);
   //   console.log(defaultValue);
   //   console.log(id);
-  //   const [value, setValue] = React.useState(() => {
-  //     if (typeof window !== "undefined") {
-  //       const jsonValue = localStorage.getItem(key);
-  //       //   console.log(jsonValue);
-  //       if (jsonValue) {
-  //         let json = JSON.parse(jsonValue);
-  //         return json;
-  //       }
+   
+     
+      
 
-  const [value, setValue] = React.useState(0);
-
+      const [value, setValue] = React.useState(() => {
+        if (typeof window !== "undefined") {
+          const jsonValue = localStorage.getItem(key);
+          //   console.log(jsonValue);
+          if (jsonValue) {
+            let json = JSON.parse(jsonValue);
+            return json;
+          }
+      }})
+  
+  // const [value, setValue] = React.useState(currentValue ? currentValue : 0);
+  
   React.useEffect(() => {
-    let currentValue;
+    
 
+    let currentValue;
     if (typeof window !== "undefined") {
+      
       try {
         //   console.log(key);
         currentValue = JSON.parse(localStorage.getItem(key) || String([]));
@@ -28,7 +35,7 @@ export function useLocalStorage(key, defaultValue) {
       // console.log(currentValue);
     }
     setValue(currentValue);
-  });
+  }, [key]);
 
   //   if (typeof window !== "undefined") {
   //     const jsonValue = localStorage.getItem(key);
