@@ -31,7 +31,7 @@ export default function ItemDetailsPage({ itemName, data }) {
       <div className={styles.itemTitle}>{itemName}</div>
       <div className={styles.backToShopLinkWrapper}>
       <Link href="/Shop" className={styles.backToShopLink}>
-        ← Back to Shop
+        ← Back to shop
       </Link>
       </div>
       {itemsArray.map((product, index) => {
