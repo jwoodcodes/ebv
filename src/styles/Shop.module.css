@@ -262,7 +262,7 @@
     /* margin-left: 1rem;
     margin-right: 1rem; */
     transform: scale(0.85);
-    margin-top: 4rem;
+    margin-top: 1rem;
   }
 }
 
@@ -289,6 +289,7 @@
     margin-top: -1rem;
     /* font-size: 1.15rem; */
     width: 85%;
+    font-size: 1.15rem;
   }
 }
 @media (max-width: 390px) {
@@ -305,7 +306,8 @@
 }
 @media (max-width: 550px) {
   .cardItemPrice {
-    padding-bottom: 3.75rem;
+    padding-bottom: 2.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -322,12 +324,13 @@
     width: fit-content;
     transform: translateY(-1rem);
     padding-bottom: 5rem;
+    font-size: 1.2rem;
   }
 }
 @media (max-width: 380px) {
   .cardMoreDetails {
     display: inline;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     width: fit-content;
     transform: translateY(-1rem);
     padding-bottom: 5rem;
