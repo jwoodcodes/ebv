@@ -13,7 +13,7 @@ export default function MainNav() {
     <nav className={styles.mainNav}>
       <div className={styles.navLogoWrapper}>
         <Image
-          src="/ebvLogo.jfif"
+          src="/ebvLogo.png"
           className={styles.headerLogo}
           width={40}
           height={40}

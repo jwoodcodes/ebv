@@ -7,7 +7,7 @@ export default function MarketAndMessage() {
     <div className={styles.marketandMessageWrapper}>
       <Link href="https://columbiafarmersmarket.org/" className={styles.market}>
         <Image
-          src="/farmers-market-logo"
+          src="/farmers-market-logo.png"
           width={350}
           height={325}
           alt="Columbia Farmers Market Logo"
